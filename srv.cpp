@@ -21,7 +21,7 @@ main(int argc, char* argv[]){
 	for(;;){
 		zmq_recv (sock, recv_buf, 256, 0);
 		printf("%s\n", recv_buf);
-		usleep(5);
+		sleep(5);
 		zmq_send (sock, (const void *)buf, strlen(buf) + 1, 0);
 	}
 	
